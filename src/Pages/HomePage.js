@@ -2,15 +2,20 @@ import React from 'react'
 import Search from '../Components/Search'
 import Addfunc from '../Components/Addfunc'
 import Heading from '../Components/Heading'
+import Logo from "../pictures/searcherlogo.png"
 
 export default function HomePage() {
-  const size = '8009px';
   return (
     <div className='flex-col'>
-      {/* <Addfunc/>
-      <Search className={`w-${size}`}/>
+      <div className='flex justify-between items-center px-12 py-5'>
+        <img src={Logo} alt="Logo"/>
+      <Addfunc/>
+      </div>
+      <div className='flex flex-col items-center justify-center space-y-7'>
       <Heading/>
-      <button>submit</button>
+      <Search/>
+      </div>
+      {/* <button>submit</button>
       <h1>something is here</h1> */}
     </div>
   )

@@ -16,10 +16,10 @@ export default function App() {
   return (
     <div className="App">
       <Searchinputfun> 
-          <Navbar />
+          {/* <Navbar /> */}
           <Suggestions/>          
         <Router>
-          <Category />
+          {/* <Category /> */}
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
             <Route exact path="/links" element={<Links />} />
