@@ -49,7 +49,7 @@ export default function Suggestions() {
       {display && (
         <div
           ref={dropdownRef}
-          className="fixed bg-white top-[52px] left-36 px-10 py-5 w-[50vw] z-10 border-b border-l border-r input-bar rounded"
+          className="fixed bg-white top-[60px] left-[157px] px-10 py-5 w-[50vw] z-50 border-b border-l border-r input-bar rounded"
         >
           {recommends.map((e, index) => {
             let { title } = e;
