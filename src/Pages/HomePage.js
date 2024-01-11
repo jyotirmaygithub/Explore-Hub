@@ -1,22 +1,22 @@
 import React from 'react'
 import Search from '../Components/Search'
 import Addfunc from '../Components/Addfunc'
-import Heading from '../Components/Heading'
-import Logo from "../pictures/searcherlogo.png"
+import AppLogo from '../Components/Logo'
 
 export default function HomePage() {
   return (
-    <div className='flex-col'>
+    <div className='flex-col space-y-32'>
       <div className='flex justify-between items-center px-12 py-5'>
-        <img src={Logo} alt="Logo"/>
+       <AppLogo/>
       <Addfunc/>
       </div>
       <div className='flex flex-col items-center justify-center space-y-7'>
-      <Heading/>
+        <div className='flex space-x-2 justify-center items-center'>
+        <AppLogo/>
+        <p className='font-bold text-3xl'>ExploreHub</p>
+        </div>
       <Search/>
       </div>
-      {/* <button>submit</button>
-      <h1>something is here</h1> */}
     </div>
   )
 }

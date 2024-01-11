@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Category() {
   return (
     <>
-    <div className='flex justify-start mt-20 items-center '>
+    <div className='flex justify-start mt-24 items-center '>
       <Link className='link' to="/links">
         <li>🔍Links</li>
       </Link>
