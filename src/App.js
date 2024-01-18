@@ -6,26 +6,60 @@ import Links from "./Pages/Links";
 import Imagedata from "./Pages/Images";
 import News from "./Pages/News";
 import Video from "./Pages/Videos";
-import Suggestions from "./Components/Suggestions";
-import { UserEntertedInput } from "./Context/SearchContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage"
+import HomePage from "./Pages/HomePage";
 
 export default function App() {
-  // const {userinpu} = UserEntertedInput
   return (
     <div className="App">
-      <Searchinputfun> 
-          {/* <Navbar /> */}
-          <Suggestions/>          
+      <Searchinputfun>
         <Router>
-          {/* <Category /> */}
           <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
-            <Route exact path="/links" element={<Links />} />
-            <Route exact path="/images" element={<Imagedata />} />
-            <Route exact path="/news" element={<News/>}/>
-            <Route exact path="/videos" element={<Video/>}/>
+            <Route exact path="/" element={<HomePage />} />
+            <Route
+              exact
+              path="/links"
+              element={
+                <>
+                  <Navbar />
+                  <Category />
+                  <Links />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/images"
+              element={
+                <>
+                  <Navbar />
+                  <Category />
+                  <Imagedata />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/news"
+              element={
+                <>
+                  <Navbar />
+                  <Category />
+                  <News />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/videos"
+              element={
+                <>
+                  <Navbar />
+                  <Category />
+                  <Video />
+                </>
+              }
+            />
           </Routes>
         </Router>
       </Searchinputfun>
