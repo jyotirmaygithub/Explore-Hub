@@ -53,10 +53,10 @@ export default function News() {
     {loading && <Loader/>}
     <ScrollTop/>
      {loading === false && <div className="px-52 py-12">
-        {moredata.map((e) => {
+        {moredata.map((e,index) => {
           let { description, title, url, urlToImage } = e;
           return (
-            <div className="my-10 space-x-4">
+            <div key={index} className="my-10 space-x-4">
                 {url  && url !== "https://removed.com" ? <Link className="flex justify-between items-center news-box space-x-10" target="_blank" to={url}>
                 <div className="w-[50vw]">
                   <h2 className="text-[20px] font-[600]">{title}</h2>

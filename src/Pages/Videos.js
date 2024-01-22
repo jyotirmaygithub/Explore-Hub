@@ -60,8 +60,8 @@ export default function Videos() {
         {videodata.map((e,index) => {
           let { snippet,id } = e;
           return (
-            <div className="my-10">
-              {id && id.videoId ? <Link key={index} target="_blank" className="flex justify-between items-center videos-box space-x-10" to={`https://www.youtube.com/watch?v=${id.videoId}`} >
+            <div key={index} className="my-10">
+              {id && id.videoId ? <Link  target="_blank" className="flex justify-between items-center videos-box space-x-10" to={`https://www.youtube.com/watch?v=${id.videoId}`} >
               <div className="w-[50vw]">
                {snippet && snippet.title ?<h3 className="text-[20px] font-[600]">{snippet.title}</h3> : ' '}
                 {snippet && snippet.description ? <p>{snippet.description}</p> : ' '}
