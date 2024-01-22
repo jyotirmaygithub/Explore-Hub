@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { UserEntertedInput } from "../Context/SearchContext";
 
 export default function Suggestions() {
@@ -6,6 +7,10 @@ export default function Suggestions() {
   const { searchTerm, setsearchTerm, setuserinput, display, setdisplay } =
     UserEntertedInput();
   const dropdownRef = useRef(null);
+  // Navigation Hook : It is use to navigate the user to the different pages.
+  const navigate = useNavigate();
+  // Location Hook : To know the actual location of the user.
+  const location = useLocation();
 
   let api = process.env.React_App_First_Search_Api;
   let engineoid = process.env.React_App_First_Search_Engine;
@@ -44,12 +49,17 @@ export default function Suggestions() {
     };
   }, []);
 
+  function UserNavigation() {
+    if (location.pathname === `/`) {
+      navigate(`/links`)
+    }
+  }
   return (
     <>
       {display && (
         <div
           ref={dropdownRef}
-          className="fixed bg-white top-[52px] left-36 px-10 py-5 w-[50vw] z-10 border-b border-l border-r input-bar rounded"
+          className="fixed bg-white  px-10 py-5 w-[50vw] z-50 border-b border-l border-r input-bar rounded"
         >
           {recommends.map((e, index) => {
             let { title } = e;
@@ -63,6 +73,7 @@ export default function Suggestions() {
                     setuserinput(title);
                     setsearchTerm(title);
                     setdisplay(false);
+                    UserNavigation();
                   }}
                 >
                   {title}

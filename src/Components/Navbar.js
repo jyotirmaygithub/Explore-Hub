@@ -1,16 +1,23 @@
 import React from 'react'
-import Logo from './Heading'
+import AppLogo from './Logo'
 import Search from './Search'
 import Addfunc from './Addfunc'
-import Suggestions from './Suggestions'
+import { useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  function handleLocation(){
+    navigate(`/`)
+  }
   return (
     <>
-    <div className='flex justify-evenly items-center w-full bg-white'>
-      <Logo/>
-      <Search/>
-      {/* <Suggestions/> */}
+    <div className=' fixed top-0 z-40 flex justify-between px-8 py-6 items-center w-full bg-gray-200'>
+      <div className='flex space-x-3'>
+      <div className='flex space-x-2 justify-center items-center'>
+        <AppLogo/>
+        <p className='font-bold text-[18px] cursor-pointer' onClick={handleLocation}>ExploreHub</p>
+        </div> <Search/>
+      </div>
       <Addfunc/>
     </div>
     </>
