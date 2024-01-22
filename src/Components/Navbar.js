@@ -11,7 +11,7 @@ export default function Navbar() {
   }
   return (
     <>
-    <div className=' fixed top-0 z-40 flex justify-between px-8 py-6 items-center w-full bg-gray-100'>
+    <div className=' fixed top-0 z-40 flex justify-between px-8 py-6 items-center w-full bg-gray-200'>
       <div className='flex space-x-3'>
       <div className='flex space-x-2 justify-center items-center'>
         <AppLogo/>
