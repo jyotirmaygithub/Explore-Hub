@@ -20,7 +20,7 @@ export default function HomePage() {
     setdisplay(true);
   }
   return (
-    <div className="flex-col space-y-32">
+    <div className="flex-col space-y-52">
       <div className="flex justify-between items-center px-12 py-5">
         <AppLogo />
         <Addfunc />

@@ -83,7 +83,7 @@ export default function Imagedata() {
               imagedata.map((e,index) => {
                 let { link, title, image } = e;
                 return link ? (
-                  <div className="h-[40vh] w-[23vw] m-[10px] rounded image-box" key={index}>
+                  <div className="h-[40vh] w-auto m-[10px] rounded image-box" key={index}>
                     <img
                       className="h-full w-full object-cover rounded "
                       onClick={() => fullview(link, title, image)}
@@ -101,11 +101,11 @@ export default function Imagedata() {
           <div className="flex justify-centre items-center w-full another-box">
             <div className="universal inside-another-box">
               <img src={Close} style={{cursor : 'pointer'}} onClick={closefullview} alt="" />
-              <Link target="_blank" to={holderlink} className="universal link link-images-add ">
+              <Link target="_blank" to={holderlink} className="universal link link-images-add webkit">
                 <div>
                   <img src={imagehold} alt="" />
                 </div>
-                <div className="m-4 pl-10">
+                <div className="m-4 pl-10 webkit">
                   <h2>{holdertitle} </h2>
                   <p>{holderlink.split(" ").splice(0, 5).join(" ")} </p>
                 </div>

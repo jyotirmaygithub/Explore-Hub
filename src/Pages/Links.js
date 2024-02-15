@@ -53,7 +53,7 @@ export default function Links() {
   return (
     <>
     <ScrollTop/>
-      <div className="pl-40">
+      <div className="pl-[20vw] pr-[5vw]">
         {searchinfo && (
           <div className="flex space-x-2 mt-5">
             <h4>About {searchinfo.formattedTotalResults}</h4>

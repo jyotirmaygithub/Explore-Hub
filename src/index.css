@@ -119,3 +119,9 @@ li {
   margin: 5px 20px;
   font-family: cursive;
 }
+.webkit {
+  width: -webkit-fill-available;
+}
+@media screen  and (max-width: 970px){
+  
+}

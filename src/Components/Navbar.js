@@ -11,14 +11,13 @@ export default function Navbar() {
   }
   return (
     <>
-    <div className=' fixed top-0 z-40 flex justify-between px-8 py-6 items-center w-full bg-gray-200'>
+    <div className=' fixed top-0 z-40 flex justify-between px-3 py-6 items-center w-full bg-gray-200'>
       <div className='flex space-x-3'>
-      <div className='flex space-x-2 justify-center items-center'>
+      <div className='flex space-x-1 justify-center items-center'>
         <AppLogo/>
         <p className='font-bold text-[18px] cursor-pointer' onClick={handleLocation}>ExploreHub</p>
         </div> <Search/>
       </div>
-      <Addfunc/>
     </div>
     </>
   )

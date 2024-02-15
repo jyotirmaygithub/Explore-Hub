@@ -52,7 +52,7 @@ export default function News() {
     <>
     {loading && <Loader/>}
     <ScrollTop/>
-     {loading === false && <div className="px-52 py-12">
+     {loading === false && <div className="pl-[20vw] pr-[5vw]">
         {moredata.map((e,index) => {
           let { description, title, url, urlToImage } = e;
           return (

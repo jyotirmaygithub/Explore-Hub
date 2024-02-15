@@ -48,7 +48,7 @@ export default function Videos() {
     <>
     {onetime && <Loader/>}
     <ScrollTop/>
-    {onetime === false && <div className="px-52 py-12">
+    {onetime === false && <div className="pl-[20vw] pr-[5vw]">
       <InfiniteScroll
         dataLength={videodata.length}
         next={fetchdata}
